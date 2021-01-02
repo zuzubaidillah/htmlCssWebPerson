@@ -1,0 +1,17 @@
+:root{
+    --mainColor: #606B56;
+    --secondaryColor: #515a48;
+
+    --borderColor: #161914;
+
+    /* merubah warna pada bagian text */
+    --mainText: #FFF;
+    --secondarytext: #eeeeee;
+
+    --themeDotBorder: #FFF;
+
+    --previewBg: rgba(81, 90, 72, 0.8);
+    --previewShhadow: #2a2f25;
+
+    --bottonColor: #669966;
+}

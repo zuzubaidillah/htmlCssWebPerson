@@ -1,0 +1,446 @@
+:root{
+    --mainColor: #eaeaea;
+    --secondaryColor: #fff;
+
+    --borderColor: #c1c1c1;
+
+    /* merubah warna pada bagian text */
+    --mainText: rgb(0, 0, 0);
+    --secondarytext: #4b5156;
+
+    --themeDotBorder: #24292e;
+
+    --previewBg: rgba(190, 201, 201, 0.769);
+    --previewShhadow: rgb(196, 162, 77);
+
+    --bottonColor: black;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body *{
+    transition: 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--mainText);
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500 ;
+}
+
+p, ul, li, span, label, input, textarea{
+    color: var(--secondarytext);
+    font-family: 'Roboto Mono', monospace;
+}
+h1{font-size: 56px;}
+h2{font-size: 36px;}
+h3{font-size: 28px;}
+h4{font-size: 24px;}
+h5{font-size: 20px;}
+h6{font-size: 16px;}
+
+a{
+    /* text-decoration:  untuk menghilangkan bagian default style pada tag html a; */
+    text-decoration: none;
+    color: #17a2b8;
+}
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.main-container{
+    /* background-color: violet; */
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.greeting-wrapper{
+    /* background-color: lightcyan; */
+    display: grid;
+    text-align: center;
+    /* justify-content: center; */
+    align-content: center;
+    /* border: 2px dashed lightcoral; */
+    min-height: 10em;
+}
+
+.intro-wrapper{
+    word-break: break-word;
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+
+
+    /* https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 16px 21px 18px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 21px 18px -4px rgba(0,0,0,0.75);
+    box-shadow: 16px 21px 18px -4px rgba(0,0,0,0.75);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 3em 30em; membuat tinggi dari baris */
+    /* grid-template-rows: 3em 30em; */
+    /* 'nav-wrapper nav-wrapper' disini terdapat 2 kali class dikarenakan gridTemplateColumn terdapat 2nilai yaitu 1fr 1fr */
+    grid-template-areas: 
+    'nav-wrapper nav-wrapper'
+    'left-column right-column'
+    ;
+}
+
+.nav-wrapper{
+    border-radius: 5px 5px 0 0;
+    grid-area: nav-wrapper;
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    /* display: flex; digunkan untuk objek apa saja yang didalam diplay class nav-wrapper akan menjadi sejajar */
+    /* 
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
+    align-items: center; digunakan untuk rata tengah antara atas dan bawah sama
+    */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+}
+
+#navigation{
+    margin: 0;
+    padding: 10px;
+}
+
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* display: flex; */
+}
+
+#navigation a{
+    color: var(--mainText);
+}
+
+.dots-wrapper{
+    /* background-color: white; */
+    display: flex;
+    padding: 10px;
+}
+
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+    /* https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 16px 21px 18px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 21px 18px -4px rgba(0,0,0,0.75);
+    box-shadow: 16px 21px 18px -4px rgba(0,0,0,0.75);
+}
+
+#dots-1{
+    background-color: #FC6058;
+}
+
+#dots-2{
+    background-color: rgb(255, 242, 97);
+}
+
+#dots-3{
+    background-color: rgb(111, 205, 85);
+}
+
+.left-column{
+    grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* background-color: lightpink; */
+    /* border: 1px dashed lightcoral; */
+}
+
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+    /* background-color: #17a2b8; */
+}
+
+.theme-dot{
+    /* display: inline-flex; */
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    /* https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 13px 10px 18px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 10px 18px -4px rgba(0,0,0,0.75);
+    box-shadow: 13px 10px 18px -4px rgba(0,0,0,0.75);
+
+}
+
+.theme-dot:hover{
+    border-width: 5px;
+    cursor: pointer;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+
+#blue-mode{
+    background-color: rgb(45, 124, 227);
+}
+
+#green-mode{
+    background-color: rgb(106, 201, 38);
+}
+
+#purple-mode{
+    background-color: #7E4C74;
+}
+
+#settings-note{
+    font-size: 12px;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.right-column{
+    grid-area: right-column;
+    display: grid;
+    /* background-color: lightslategray; */
+    /* border: 1px dashed lightcoral; */
+    align-content: center;
+    justify-content: center;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+}
+
+#corner-tl{
+    top: -5px;
+    left: -5px;
+}
+#corner-tr{
+    top: -5px;
+    right: -5px;
+}
+#corner-bl{
+    bottom: -5px;
+    left: -5px;
+}
+#corner-br{
+    bottom: -5px;
+    right:-5px;
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShhadow);
+}
+
+.social-links{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 28px;
+}
+
+.post{
+    border: 1px solid var(--borderColor);
+    /* https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 13px 10px 30px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 10px 30px -4px rgba(0,0,0,0.75);
+    box-shadow: 13px 10px 30px -4px rgba(0,0,0,0.75);
+}
+
+.post-review{
+    background-color: white;
+    padding:15px;
+}
+
+.post-title{
+    color: black;
+    margin: 0;
+}
+
+.post-intro{
+    color: #4b5156;
+    font-size: 16px;
+}
+
+.thumbnail{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    /* margin-bottom: 50px; */
+}
+
+#contact-form label{
+    line-height: 2.7em;
+}
+
+#contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+}
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    border: 1px solid var(--secondaryColor);
+    font-size: 14px;
+}
+
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--bottonColor);
+    border: none;
+}
+
+.pd{
+
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+@media screen and (max-width: 1200px){
+
+    .main-container{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+}
+
+#preview-shadow{
+    background-color: var(--previewShhadow);
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#preview{
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding: 15px;
+    position: relative;
+}
+
+@media screen and (max-width: 800px){
+
+    .pd{
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .intro-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 3em 30em; membuat tinggi dari baris */
+        /* grid-template-rows: 3em 30em; */
+        /* 'nav-wrapper nav-wrapper' disini terdapat 2 kali class dikarenakan gridTemplateColumn terdapat 2nilai yaitu 1fr 1fr */
+        grid-template-areas: 
+        'nav-wrapper'
+        'left-column'
+        'right-column'
+        ;
+    }
+
+    .right-column{
+        justify-content: center;
+        /* margin: 0px; */
+        /* position: relative; */
+    }
+
+    .about-me{
+        padding-bottom: 30px;
+    }
+
+    #preview-shadow{
+        background-color: var(--previewShhadow);
+        width: 200px;
+        height: 180px;
+        padding-left: 100px;
+        padding-top: 30px;
+    }
+
+    #preview{
+        width: 250px;
+        border: 1.5px solid #17a2b8;
+        background-color: var(--previewBg);
+        padding: 15px;
+        position: relative;
+        font-size: 12px;
+        margin-left: -70px;
+    }
+
+}
