@@ -76,6 +76,11 @@ a{
     min-height: 10em;
 }
 
+.about-me{
+    padding-bottom: 30px;
+    /* background-color: #17a2b8; */
+}
+
 .intro-wrapper{
     word-break: break-word;
     background-color: var(--secondaryColor);
@@ -269,6 +274,7 @@ a{
 .about-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-left: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -282,6 +288,7 @@ a{
 .social-links{
     display: grid;
     align-content: center;
+    /* background-color: #24292e; */
     text-align: center;
 }
 
@@ -376,6 +383,10 @@ a{
         margin: 0 auto;
     }
 
+    #preview h3{
+        font-size: 1rem;
+    }
+
 }
 
 #preview-shadow{
@@ -441,6 +452,11 @@ a{
         position: relative;
         font-size: 12px;
         margin-left: -70px;
+    }
+
+
+    #preview h3{
+        font-size: 1.3rem;
     }
 
 }

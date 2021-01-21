@@ -15,6 +15,9 @@ for (var i = 0; themeDots.length > i; i++) {
     })
 }
 
+// MERUBAH ATTRIBUTE
+// document.getElementById('btn-iya').setAttribute('onclick',"hapus('"+id+"')")
+
 function setTheme(mode) {
     if (mode=='light') {
         document.getElementById('theme-style').href = 'default.css'
